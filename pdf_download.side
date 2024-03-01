@@ -1,0 +1,56 @@
+{
+  "id": "ba037eb8-6b18-4708-93d6-8d1b89f3a0a1",
+  "version": "2.0",
+  "name": "pdf",
+  "url": "http://dtu.ac.in",
+  "tests": [{
+    "id": "f57885d5-f32a-4707-b4c2-41c6fca9419c",
+    "name": "download_pdf_latest",
+    "commands": [{
+      "id": "9347e98d-1870-4670-a379-494609bafb08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3f1dd98-ab2b-410f-91f9-c0d9115f8f82",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x795",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e46c7da4-1e05-403b-a2b1-bd9a23eac99b",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "//div[@id='tab4']/div/ul/li/h6/a@href",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "1e47cf63-073b-429c-bbd6-2b0e4cd603d2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tab4']/div/ul/li/h6/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8573b36-08ee-4b2b-8234-bc3bc42c98ad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "function downloadPDF(pdfFilePath) {          var a = document.createElement('a');     a.style.display = 'none';       a.href = pdfFilePath;        a.download = pdfFilePath.split('/').pop();        document.body.appendChild(a);        a.click();      document.body.removeChild(a); }  downloadPDF(name); return 0;",
+      "targets": [],
+      "value": "var"
+    }]
+  }],
+  "suites": [{
+    "id": "9a5eb9ff-ac40-475a-bdda-956b828208e4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://dtu.ac.in/"],
+  "plugins": []
+}
