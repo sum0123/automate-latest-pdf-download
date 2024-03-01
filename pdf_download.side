@@ -41,6 +41,13 @@
       "target": "function downloadPDF(pdfFilePath) {          var a = document.createElement('a');     a.style.display = 'none';       a.href = pdfFilePath;        a.download = pdfFilePath.split('/').pop();        document.body.appendChild(a);        a.click();      document.body.removeChild(a); }  downloadPDF(name); return 0;",
       "targets": [],
       "value": "var"
+    }, {
+      "id": "781a5934-c55a-4972-a0a0-ad26ffe0b4c3",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
