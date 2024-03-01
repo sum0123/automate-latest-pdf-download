@@ -5,7 +5,7 @@
   "url": "http://dtu.ac.in",
   "tests": [{
     "id": "f57885d5-f32a-4707-b4c2-41c6fca9419c",
-    "name": "download_pdf_latest",
+    "name": "download_pdf_latest_3",
     "commands": [{
       "id": "9347e98d-1870-4670-a379-494609bafb08",
       "comment": "",
@@ -21,12 +21,40 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "78c99d73-af81-4a6c-aaf0-8e3dc4881da5",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e46c7da4-1e05-403b-a2b1-bd9a23eac99b",
       "comment": "",
       "command": "storeAttribute",
-      "target": "//div[@id='tab4']/div/ul/li/h6/a@href",
+      "target": "xpath=//div[@id='tab4']/div/ul/li/h6/a@href",
       "targets": [],
       "value": "name"
+    }, {
+      "id": "18619a18-7d3d-4b8c-9728-05caa22a0058",
+      "comment": "",
+      "command": "if",
+      "target": "name == ' '",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41bf6f73-1807-4862-844e-32a4ff5ccbe0",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "//div[@id='tab4']/div/ul/h6/following-sibling::a[1]@href",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "17b520e9-c758-4e81-b164-e5cb00803b01",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
     }, {
       "id": "1e47cf63-073b-429c-bbd6-2b0e4cd603d2",
       "comment": "",
