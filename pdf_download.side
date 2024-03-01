@@ -1,0 +1,134 @@
+{
+  "id": "ba037eb8-6b18-4708-93d6-8d1b89f3a0a1",
+  "version": "2.0",
+  "name": "pdf",
+  "url": "http://dtu.ac.in",
+  "tests": [{
+    "id": "f57885d5-f32a-4707-b4c2-41c6fca9419c",
+    "name": "3",
+    "commands": [{
+      "id": "9347e98d-1870-4670-a379-494609bafb08",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3f1dd98-ab2b-410f-91f9-c0d9115f8f82",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x795",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e46c7da4-1e05-403b-a2b1-bd9a23eac99b",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "//div[@id='tab4']/div/ul/li/h6/a@href",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "1e47cf63-073b-429c-bbd6-2b0e4cd603d2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='tab4']/div/ul/li/h6/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8573b36-08ee-4b2b-8234-bc3bc42c98ad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "function downloadPDF(pdfFilePath) {          var a = document.createElement('a');     a.style.display = 'none';       a.href = pdfFilePath;        a.download = pdfFilePath.split('/').pop();        document.body.appendChild(a);        a.click();      document.body.removeChild(a); }  downloadPDF(name); return 0;",
+      "targets": [],
+      "value": "var"
+    }]
+  }, {
+    "id": "604710f7-2adb-4ab3-ac44-c92c1438bbbc",
+    "name": "2",
+    "commands": [{
+      "id": "25433041-4aee-490b-9a08-c1dce2e64373",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06534481-8726-4076-b6d0-79ae9fcd8604",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1052x796",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c510933-3bb6-45d1-aed5-ef2239c57f3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=NOTICE INVITING APPLICATIONS FOR EMPANELMENT OF ADVOCATES.",
+      "targets": [
+        ["linkText=NOTICE INVITING APPLICATIONS FOR EMPANELMENT OF ADVOCATES.", "linkText"],
+        ["css=#tab4 li:nth-child(1) .colr", "css:finder"],
+        ["xpath=//a[contains(text(),'NOTICE INVITING APPLICATIONS FOR EMPANELMENT OF ADVOCATES.')]", "xpath:link"],
+        ["xpath=//div[@id='tab4']/div/ul/li/h6/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, './Web/Jobs/2024/feb/file0202.pdf')]", "xpath:href"],
+        ["xpath=//h6/a", "xpath:position"],
+        ["xpath=//a[contains(.,'NOTICE INVITING APPLICATIONS FOR EMPANELMENT OF ADVOCATES.')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4324",
+      "windowTimeout": 2000
+    }, {
+      "id": "79442acc-7b4f-46f1-a20c-79d039946894",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7acd4a4c-d099-44ff-bb4b-bada25799696",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4324}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fff2c156-8bad-4dd0-9180-06d0ea3e1ebc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d63ba0-4825-4c03-81ae-4b1460e7382f",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bf96462-1507-4c52-9122-a21ac8ca4f4c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bbfc3ff-95f3-4080-8755-d7ee71f13300",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9a5eb9ff-ac40-475a-bdda-956b828208e4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://dtu.ac.in/"],
+  "plugins": []
+}
